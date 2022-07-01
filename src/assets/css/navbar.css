@@ -1,0 +1,100 @@
+:root {
+  --tw-text-opacity: 1;
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  --tw-gradient-from: #000;
+  --tw-gradient-to: rgba(230, 225, 225, 0.937);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.navbar-content {
+  width: 98.3%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5.5rem;
+  color: #fff;
+  background-color: rgba(28, 27, 27, 0.752);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-title {
+  font-size: 3rem;
+  line-height: 1;
+  font-family: Great Vibes;
+  color: rgb(205, 217, 240/ var(--tw-text-opacity));
+
+}
+
+.navbar-ul {
+  list-style: none;
+}
+
+.navbar-li a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(205, 217, 240 / var(--tw-text-opacity));
+}
+
+.navbar-li a:hover {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-duration: 200ms;
+}
+
+.navbar-icon {
+  cursor: pointer;
+  padding-right: 1rem;
+  z-index: 10;
+  color: rgb(205, 217, 240 / var(--tw-text-opacity));
+}
+
+.navbar-ul-col {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  list-style: none;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+  background: linear-gradient(to bottom, var(--tw-gradient-stops), rgba(123, 123, 123, 0.724));
+}
+
+.navbar-li-col {
+  cursor: pointer;
+  text-transform: capitalize;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  padding-right: 6rem
+    /* 16px */
+  ;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-duration: 200ms;
+}
+
+.navbar-li-col a {
+  text-decoration: none;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .navbar-ul {
+    display: none;
+    display: flex;
+  }
+
+  .navbar-icon {
+    display: none;
+  }
+}
