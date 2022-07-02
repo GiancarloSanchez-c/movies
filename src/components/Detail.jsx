@@ -12,7 +12,7 @@ const Detail = () => {
 
   useEffect(() => {
     dispatch(getMovieDetails(id));
-  }, []);
+  }, [dispatch, id]);
 
   return (
     <div className="detail-container">

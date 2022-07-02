@@ -20,7 +20,7 @@ const Movie = () => {
         searchMovie && searchMovie.map((movie) => (
           <div key={movie.imdbID} className="movie-search" onClick={() => setHeart(!heart)}>
 
-            <Link to={`/movie_detail/${movie.imdbID}`}>
+            <Link to={`/detail/${movie.imdbID}`}>
               <h3 className="detail">{movie.Title}</h3>
             </Link>
             <button onClick={() => dispatch(addMovieFavorite(movie))} className='button-favorite'>

@@ -9,7 +9,7 @@
   justify-items: center;
   background: #052c34f6;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  height: 100vh;
+  margin-top: 15px;
 }
 
 .section-one {
@@ -19,24 +19,27 @@
   justify-content: center;
   background: #052c34f6;
   margin-left: 150px;
-  color:#fff;
+  color: #fff;
   padding: 20px;
   border-radius: 20px;
   line-height: 2.5rem;
   border: 8px solid #e8a23dde;
   font-family: 'Arima', cursive;
 }
-.section-one  h1 {
+
+.section-one h1 {
   font-size: 2.5rem;
   font-weight: bold;
+  text-align: center;
   text-decoration: none;
 }
-.section-one h5  {
+
+.section-one h5 {
   font-size: 1.2rem;
   font-family: 'Arima', cursive;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .section-detail {
@@ -47,18 +50,19 @@
   justify-content: center;
   background: #052c34f6;
   margin-left: 150px;
-  color:#fff;
-  padding: 20px;
+  color: #fff;
   border-radius: 20px;
   line-height: 2.5rem;
   border: 8px solid #e8a23dde;
   font-size: 1.1rem;
   font-family: 'Arima', cursive;
+  text-align: center;
+
 }
 
 .btn-back {
   background: #e8a23dde;
-  color:#fff;
+  color: #fff;
   padding: 1rem 25px;
   border-radius: 20px;
   border: 0px solid #e8a23dde;
@@ -66,7 +70,72 @@
   cursor: pointer;
   font-size: 1rem;
 }
+
 .poster {
   border-radius: 1.7rem;
   transition-duration: 200ms;
+}
+
+@media (min-width:280px) and (max-width:319px) {
+  .section-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .section-one {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .section-detail {
+    width: 65%;
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width:420px) {
+  .section-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  }
+
+  .section-one {
+    width: 84%;
+    margin-left: 0px;
+  }
+
+  .section-detail {
+    width: 95%;
+    margin-left: 0px;
+  }
+}
+
+
+@media (min-width: 421px) and (max-width:1020px) {
+  .section-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .section-one {
+    width: 90%;
+    margin-left: 0px;
+  }
+
+  .section-detail {
+    width: 95%;
+    margin-left: 0px;
+  }
+}
+
+
+@media (min-width: 1021px) and (max-width:1440px) {
+ 
+  .section-one {
+    padding:5px;
+    margin-left: 10px;
+  }
+
+  .section-detail {
+    width: 90%;
+    margin-left: 0px;
+  }
 }

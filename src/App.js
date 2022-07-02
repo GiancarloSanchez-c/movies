@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Router, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Detail from './components/Detail';
 import Favorites from './components/Favorites';
 import Home from "./components/Home";
