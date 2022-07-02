@@ -1,0 +1,69 @@
+.favorites-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  text-align: center;
+  background: #052c34f6;
+}
+
+.favorite-search a {
+  text-decoration: none;
+  color: #e8a23dde;
+}
+
+.favorites-h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Arima', cursive;
+  font-weight: bold;
+  color: #fff;
+}
+
+.favorite-title {
+  font-size: 1.2rem;
+  font-family: 'Arima', cursive;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+
+
+.remove-favorite {
+  background: #fb0404de;
+  border: 1px solid #e8a23dde;
+  width: 35px;
+  height: 35px;
+  margin: 20px 5px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+@media (min-width:280px) and (max-width:420px) {
+  .favorites-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  }
+
+}
+
+@media (min-width: 421px) and (max-width: 520px) {
+
+  .favorites-content {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+
+  }
+}
+
+@media (min-width: 521px) and (max-width: 768px) {
+
+  .favorites-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  }
+}

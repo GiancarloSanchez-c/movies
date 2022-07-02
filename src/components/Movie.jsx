@@ -18,7 +18,7 @@ const Movie = () => {
     <div className="movie-content">
       {
         searchMovie && searchMovie.map((movie) => (
-          <div key={movie.imdbID} className="movie-search" onClick={() => setHeart(!heart)}>
+          <div key={movie.imdbID} className="movie-search">
 
             <Link to={`/detail/${movie.imdbID}`}>
               <h3 className="detail">{movie.Title}</h3>
@@ -33,7 +33,7 @@ const Movie = () => {
               <button className='button-favorite'>Read More</button>
             </Link>
             <div className='img' >
-              <img className="movie-img" src={movie.Poster} alt="poster de la pelicula" />
+              <img className="movie-img" src={movie.Poster} alt="Image not found" />
             </div>
             <p> {movie.Plot} </p>
           </div>

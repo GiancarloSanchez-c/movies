@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import { removeFavoritesMovie } from '../redux/action'
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import '../assets/css/favorites.css'
+import NavBar from './NavBar'
 
 const Favorites = () => {
 
@@ -10,27 +12,30 @@ const Favorites = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <div>
-        <h2>Favorites Movies</h2>
-      </div>
-      <div>
+    <>
+    <NavBar />
+      <h1 className="favorites-h1">Favorites Movies</h1>
+      <div className="favorites-content">
         {
           favorites && favorites.map((favorite) => (
-            <div key={favorite.imdbID} className="movie-search ">
+            <div key={favorite.imdbID} className="favorite-search ">
               <Link to={`/detail/${favorite.imdbID}`}>
-                <h3>{favorite.title}</h3>
+                <h3 className="favorite-title" >{favorite.Title}</h3>
               </Link>
-              <button onClick={() => dispatch(removeFavoritesMovie(favorite.imdbID))}>
+              <button className="remove-favorite" onClick={() => dispatch(removeFavoritesMovie(favorite.imdbID))}>
                 x
               </button>
-              <img src={favorite.Poster} alt={favorite.title} />
-              
+              <div className="img">
+                <img className="movie-img" src={favorite.Poster} alt="poster de la pelicula" />
+              </div>
+              <Link to={`/detail/${favorite.imdbID}`}>
+                <button className='button-favorite'>Read More</button>
+              </Link>
             </div>
           ))
         }
       </div>
-    </div>
+    </>
   )
 }
 
