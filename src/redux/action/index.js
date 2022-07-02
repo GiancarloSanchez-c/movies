@@ -4,7 +4,7 @@ import axios from 'axios';
 export const searchMovies = (title) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=a60fc12c&s=${title}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=a60fc12c&s=${title}`);
       return dispatch({
         type: 'SEARCH_MOVIES',
         payload: response.data
@@ -19,7 +19,7 @@ export const searchMovies = (title) => {
 export const getMovieDetails = (id) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=a60fc12c&i=${id}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=a60fc12c&i=${id}`);
       return dispatch({
         type: 'MOVIE_DETAILS',
         payload: response.data
